@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/test4.css">
+</head>
+<body>
+<div id="mainWindow" class="mainWindow_style">
+    <!-- таблица с координатами шахматного поля, увы.. сделал так :(--!>
+    <div class="table">
+    <table class="table_style">
+        <tr><td></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td></td></tr>
+        <tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td></tr>
+        <tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td></tr>
+        <tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td></tr>
+        <tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td></tr>
+        <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td></tr>
+        <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td></tr>
+        <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td></tr>
+        <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+        <tr><td></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td></td></tr>
+    </table>
+    </div>
+    <!--блок для клеток шахматной доски--!>
+    <div id="pole" class="pole_style">
+            <!--заполняем поле ячейками с помощью Vue.js(круто :)--!>
+            <div class="item_style" v-for="block in blocks" :id="block.id" :class="block.item_color" @click="action"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/test4.js"></script>
+</body>
+</html>
