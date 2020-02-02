@@ -1,1 +1,1 @@
-запускаем index.html
+практика Java Script
